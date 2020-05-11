@@ -178,6 +178,11 @@ add_action( 'get_footer', 'add_footer_styles' );
 
 add_filter('show_admin_bar', '__return_false'); // отключил консоль WP
 
+add_filter( 'excerpt_length', function(){
+	return 20;
+} );
+
+add_image_size( 'spec_thumb', 90, 90, true );
 /**
  * Implement the Custom Header feature.
  */
